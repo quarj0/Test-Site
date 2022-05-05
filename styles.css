@@ -113,6 +113,40 @@
             right: 30;
             font-size: 1.4em;
         }
+        .menu-list-items a {
+            color: #f09d51;
+        }
+        .menu-list-items a:hover {
+            color: #f09d51;
+        }
+    }
+    
+    @media screen and (max-width: 480px) {
+        * {
+            font-size: 16px;
+        }
+        .section1 .banner {
+            width: 280px;
+            height: 100px;
+        }
+        .section1 .banner h1 {
+            font-size: 1.2em;
+        }
+        .burger {
+            margin-left: 1em;
+            display: block;
+            width: 30px
+        }
+        .cart-sidebar {
+            width: 100%;
+        }
+        .product {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
     }
     
     .cart .number-of-items {
