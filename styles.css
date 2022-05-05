@@ -94,6 +94,24 @@
             background: white;
             overflow: hidden;
             transform: translate(-100%);
+            transition: 0.3s linear;
+        }
+        .menu-menubar {
+            display: flex;
+            height: 80%;
+            justify-content: center;
+        }
+        .menu-list {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .menu-sidebar .close-menu {
+            position: absolute;
+            right: 30;
+            font-size: 1.4em;
         }
     }
     
