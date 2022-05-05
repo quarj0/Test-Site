@@ -133,3 +133,30 @@
     .banner a:hover {
         background: #566ada;
     }
+    /*menu bar*/
+    
+    .menu-sidebar {
+        display: none;
+    }
+    
+    .cart-sidebar {
+        background: #ececec;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 450px;
+        height: 100vh;
+        z-index: index 10;
+        transform: rotateX(100%);
+        overflow: scroll;
+    }
+    
+    .cart-sidebar .cart {
+        padding: 0;
+    }
+    
+    .cart .close-cart {
+        font-size: 1.3em;
+        padding: 1em;
+        cursor: pointer;
+    }
