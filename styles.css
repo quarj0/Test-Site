@@ -55,6 +55,48 @@
         position: relative;
     }
     
+    .none {
+        display: none;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .logo {
+            padding-left: 0;
+        }
+        .cart {
+            padding-right: 2em;
+        }
+        .menubar {
+            display: none;
+        }
+        .burger {
+            margin-left: 2em;
+            display: block;
+        }
+        .section1 .banner h1 {
+            font-size: 1.5em;
+        }
+        .banner a {
+            font-size: 0.6em;
+            padding: 1em 2em;
+        }
+        .section2 .title h1 {
+            font-size: 1.5em;
+        }
+        .menu-sidebar {
+            display: block;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 11;
+            background: white;
+            overflow: hidden;
+            transform: translate(-100%);
+        }
+    }
+    
     .cart .number-of-items {
         display: flex;
         cursor: pointer;
@@ -159,4 +201,74 @@
         font-size: 1.3em;
         padding: 1em;
         cursor: pointer;
+    }
+    
+    .fa-times {
+        margin-top: 0.5em;
+    }
+    
+    cart h2 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1em;
+        font-size: 1.1em;
+        font-family: verdana;
+    }
+    
+    .cart-product .product-image img {
+        width: 130px;
+        height: 90px;
+    }
+    
+    .cart-product-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: 1em;
+        height: 80px;
+    }
+    
+    .plus-minus {
+        display: flex;
+        transform: rotate(90deg);
+        color: #f09d51;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    
+    .total-sum {
+        text-align: center;
+        margin: 1em 0 0.5em 0;
+    }
+    
+    .clear-cart {
+        text-align: center;
+    }
+    
+    .clear-cart .btn {
+        background-color: #f09d51;
+        color: white;
+        border: 1px solid white;
+        padding: 0.5em 1.7em;
+        cursor: pointer;
+        transition: 0.3s linear;
+    }
+    
+    .clear-cart .btn:hover {
+        border: 1px solid #f09d51;
+        background: transparent;
+        color: black;
+    }
+    
+    .overlay {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        width: 100%;
+        background-color: #f09d51;
+        opacity: 0.3;
+        transition: all 0.3s linear;
     }
