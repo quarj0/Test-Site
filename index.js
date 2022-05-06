@@ -15,7 +15,7 @@ let Cart = [];
 let buttonsDOM = [];
 
 cart.addEventListener("click", function() {
-    cartSidebar.style.transform = "translate(0)"
+    cartSidebar.style.transform = "translate(0%)"
     const bodyOverlay = document.createElement("div")
     bodyOverlay.classList.add("overlay")
     setTimeout(function() {
@@ -34,41 +34,41 @@ burger.addEventListener("click", function() {
 })
 
 closeMenu.addEventListener("click", function() {
-    menuSidebar.style.transform = "translate(-100%)"
-})
-
-class Product {
-    async getProduct() {
-        const response = await fetch("products.json");
-        const data = await response.json();
-        let products = data.items;
-        products = products.map(item => {
-            const { title, price } = item.fields;
-            const { id } = item.sys;
-            const image = item.fields.image.fields.file.url;
-            return { title, price, id, image }
-        })
-        return products;
+        menuSidebar.style.transform = "translate(-100%)"
+    })
+    /*
+    class Product {
+        async getProduct() {
+            const response = await fetch("products.json");
+            const data = await response.json();
+            let products = data.items;
+            products = products.map(item => {
+                const { title, price } = item.fields;
+                const { id } = item.sys;
+                const image = item.fields.image.fields.file.url;
+                return { title, price, id, image }
+            })
+            return products;
+        }
     }
-}
 
-class UI {
-    displayProducts(products) {
-        let result = "";
-        products.forEach(product => {
-            const ProductDiv = document.createElement("div")
-            ProductDiv.innerHTML = `div class="product-card">
-            <img src="${product.image}" alt="product">
-            <span class= "add-to-cart" data-id="${product.id}">
-            <i class = fa fa-cart--plus fa-1x"
-            style = margin-right: 0.1em; font-size: 1em;></i> 
-            Add to Cart
-            </span>
-            <div class = "product-name">${product.title}</div>
-            <div class = "product-pricing">${product.price}</div>`
+    class UI {
+        displayProducts(products) {
+            let result = "";
+            products.forEach(product => {
+                const ProductDiv = document.createElement("div")
+                ProductDiv.innerHTML = `div class="product-card">
+                <img src="${product.image}" alt="product">
+                <span class= "add-to-cart" data-id="${product.id}">
+                <i class = fa fa-cart--plus fa-1x"
+                style = margin-right: 0.1em; font-size: 1em;></i> 
+                Add to Cart
+                </span>
+                <div class = "product-name">${product.title}</div>
+                <div class = "product-pricing">${product.price}</div>`
 
-            const p = document.querySelector(".product")
-            p.append(ProductDiv)
-        })
-    }
-}
+                const p = document.querySelector(".product")
+                p.append(ProductDiv)
+            })
+        }
+    }*/
